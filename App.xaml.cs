@@ -4,9 +4,9 @@
     {
         public App()
         {
-            InitializeComponent(); 
-
-            MainPage = new AppShell();    
+            InitializeComponent();
+            MainPage = new View.vPrincipal();
+                
         }
     }
 }

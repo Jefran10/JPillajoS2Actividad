@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPillajoS2Actividad.View.vPrincipal"
+             Title="vPrincipal">
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="20">
+            <Label 
+                Text="SISTEMA DE CALIFICACION"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                TextColor="Red"/>
+            <Label 
+                Text="PARCIAL 1"
+                VerticalOptions="Center" 
+                TextColor="Red"/>
+            <Picker x:Name="pkEstudiantes" Title="Estudiantes">
+                <Picker.Items>
+                    <x:String>Estudiante 1</x:String>
+                    <x:String>Estudiante 2</x:String>
+                    <x:String>Estudiante 3</x:String>
+                </Picker.Items>
+            </Picker>
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                    Text="INGRESE NOTA DE SEGUIMIENTO 1"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" 
+                    TextColor="Red"
+                    Margin="0,0,20,0"/>
+                <Entry 
+                    x:Name="txtseg1"
+                    Placeholder=""
+                    Keyboard="Numeric"
+                    MaxLength="4"
+                    Margin="20,0,0,0"
+                    TextChanged="OnNotaChanged"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                    Text="INGRESE NOTA DEL EXAMEN"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" 
+                    TextColor="Red"                
+                    Margin="0,0,20,0"/>
+                <Entry 
+                    x:Name="txtEx1"
+                    Placeholder=""
+                    Keyboard="Numeric"
+                    MaxLength="4"
+                    Margin="0,0,20,0"
+                    TextChanged="OnNotaChanged"/>
+            </StackLayout>
+            <Label 
+                Text="PARCIAL 2"
+                VerticalOptions="Center" 
+                TextColor="Red"/>
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                    Text="INGRESE NOTA DE SEGUIMIENTO 2"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" 
+                    TextColor="Red"
+                    Margin="0,0,20,0"/>
+                <Entry 
+                    x:Name="txtseg2"
+                    Placeholder=""
+                    Keyboard="Numeric"
+                    MaxLength="4"
+                    Margin="0,0,20,0"
+                    TextChanged="OnNotaChanged"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                    Text="INGRESE NOTA DEL EXAMEN"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" 
+                    TextColor="Red"
+                    Margin="0,0,20,0"/>
+                <Entry 
+                    x:Name="txtEx2"
+                    Placeholder=""
+                    Keyboard="Numeric"
+                    MaxLength="4"
+                    Margin="0,0,20,0"
+                    TextChanged="OnNotaChanged"/>
+            </StackLayout>
+            <DatePicker x:Name="dpFecha" Format="MM/dd/yyyy" />
+            <Label 
+                Text="NOTA FINAL"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                TextColor="Red"/>
+            <Button 
+                x:Name="btnCalcular"
+                Text="Calcular"
+                Clicked="btnCalcular_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
